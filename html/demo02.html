@@ -48,7 +48,7 @@
     //显示最近搜索记录
     window.onload=function(){
         if(localStorage.length != 0){
-            for(var i=0; i<localStorage.length; i++){
+            for(var i=localStorage.length; i>0; i++){
                 var key = localStorage.key(i);
                 var data = localStorage.getItem(key);
                 his.innerHTML += '<span>'+localStorage.getItem(key)+'</span>';
