@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>web存储</title>
+    <style>
+        #search{
+            width:200px;
+            height:30px;
+        }
+        #but{
+            width:140px;
+            height:30px;
+        }
+        #div{
+            width:380px;
+            border-color: red;
+        }
+        span{
+            display: inline-block;
+            background:#e0e0e0;
+            margin-bottom:20px;
+            margin-right:10px;
+        }
+        p{
+            margin-top: 0px;
+        }
+        #history{
+            width: 360px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="name" required="required" placeholder="请输入想查找的商品" id="search"/>
+    <input type="button" value="搜索" id="but"/>
+    <p>最近搜索</p>
+    <div id="div">
+        <div id="history"></div>
+        <img src="../images/delete.png" alt="" style="float:right;" id="delete">
+    </div>
+</body>
+<script>
+    var sea = document.getElementById("search");
+    var but = document.getElementById("but");
+    var his = document.getElementById("history");
+    var del = document.getElementById("delete");
+    
+    //显示最近搜索记录
+    window.onload=function(){
+        if(localStorage.length != 0){
+            for(var i=0; i<localStorage.length; i++){
+                var key = localStorage.key(i);
+                var data = localStorage.getItem(key);
+                his.innerHTML += '<span>'+localStorage.getItem(key)+'</span>';
+            }
+        }
+    }
+
+    //判重
+    function judgeRepeat(search_value){
+        for(var key in localStorage){
+            if(search_value==localStorage.getItem(key)){
+                return true;
+            }
+        }
+    }
+
+    //添加最近搜索记录
+    but.onclick = function(){
+        var sps = document.getElementsByTagName("span");
+        var time = new Date().getTime();
+        if(sea.value!=""&&!judgeRepeat(sea.value)){
+            localStorage.setItem(time,sea.value);
+            //创建节点添加
+            var sp = document.createElement('span');
+            sp.innerHTML += localStorage.getItem(time);
+            if(sps.length == 0){
+                his.appendChild(sp);
+            }else{
+                his.insertBefore(sp,sps[0]);
+            }
+            //复原搜索框
+            sea.value = "";
+        }else{
+            sea.value = "";
+        }    
+    }
+
+    //清空最近搜索
+    del.onclick = function(){
+        alert("是否清空全部搜索记录？");
+        localStorage.clear();
+        his.innerHTML = "";
+        sea.value = "";
+    }
+</script>
+</html>
