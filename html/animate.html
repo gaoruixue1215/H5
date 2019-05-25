@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            padding:20px;
+        }
+        .box{
+            width: 370px;
+            height: 430px;
+            background-color: #fff;
+            overflow: hidden;
+            box-shadow: 0 0 5px 5px #f1f0f0; 
+            
+        }
+        .pic{
+            height: 245px;
+            overflow: hidden;
+            background-color: #000;
+            transition: height 0.5s;
+        }
+        img{
+            display: block;
+            width:370px;
+            height:245px;
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .div1{
+            display:block;
+            position: absolute;
+            left:340px;
+            top:45px;
+            width:40px;
+			height:40px;
+			background-color:#fd7546;
+			border-radius: 20px/20px;
+            color:white;
+            font-size:13px;
+        }
+        .div2{
+            position: relative;
+            height: 185px;
+            padding: 20px;
+            transition: height 0.5s;
+            /* display:block;
+            width:325px;
+            height:110px;
+            padding-top:20px;
+            padding-left:20px;
+            padding-right:25px;
+            position: absolute;
+            top:270px;
+            background-color:white; */
+        }
+        .div3{
+            position: absolute;
+            top: -25px;
+            left: 0;
+            height: 25px;
+            padding: 0 15px;
+            background-color: #fd7546;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 11px;
+            line-height: 25px;
+            /* display:block;
+            width:58px;
+            height:25px;
+            background-color:#fd7546;
+            color:white;
+            font-size:15px;
+            text-align: center;
+            line-height: 25px;
+            position: absolute;
+            left:28px;
+            top:248px; */
+        }
+        h2{
+            margin: 0;
+            padding: 0 0 10px 0;
+            color: #000;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .p1{
+            margin: 0;
+            padding: 0 0 10px 0;
+            font-size: 19px;
+            color: red;
+            /* color:red;
+            font-size:20px;
+            margin-top:10px;
+            margin-bottom:0px; */
+        }
+        .p2{
+            /* display:none;
+            margin:0;
+            font-size:16.5px;
+            margin-top:0px; */
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            bottom: 97px;
+            margin: 0;
+            padding: 0;
+            color: #666C74;
+            line-height: 27px;
+            opacity: 0;
+            transform: translateY(45px);
+            transition: opacity 0.3s, transform 0.3s;
+            transition-delay: 0s;
+        }
+        span{
+            width:330px;
+            height:30px;
+            padding-top:10px;
+            padding-left:20px;
+            color:#9da2a6;
+            font-size:12px;
+            position: absolute;
+            top:410px;
+
+        }
+        .box:hover .div2{
+            height: 300px;
+            /* top:160px;
+            height:240px;
+            transition-property:height,top; */
+            /* transition-duration:1s; */
+        }
+        .box:hover .p2{
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.2s;
+        }
+        .box:hover .pic{
+            height: 130px;
+        }
+        .box:hover img{
+            opacity: 0.6;
+            transform: scale(1.2);
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="pic"><img src="../images/zhanqiao.jpg" alt=""/></div>
+        <div class="div1">&nbsp;&nbsp;&nbsp;15 <br>&nbsp; 五月</div>
+        <div class="div2">
+            <div class="div3">照片</div>
+            <h2>青岛栈桥</h2>
+            <p class="p1">国家AAAA级旅游景区</p>
+            <p class="p2">青岛栈桥是青岛海滨风景区的景点之一，是国务院于1982年首批公布的国家级风景名胜区，青岛栈桥位于游人如织的青岛中山路南端，桥身从海岸探入如弯月般的青岛湾深处，桥身供游人参观并在此停靠旅游船，由此乘船可看海上青岛。</p>
+        </div>
+        <span>10分钟前&nbsp;&nbsp;&nbsp;123评论</span>
+    </div>
+</body>
+</html>
