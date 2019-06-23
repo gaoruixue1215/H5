@@ -151,7 +151,9 @@ body{
 }
 
 /*轮播图*/
-
+.slide{
+    margin-top:120px;
+}
 .bb_cont{
     position: absolute;
     left:15%;
@@ -190,6 +192,9 @@ body{
     }
 }
 @media screen and (max-width: 768px) {
+    .slide{
+        margin-top:80px;
+    }
     .bb_cont{
         position: absolute;
         left:10%;
@@ -213,6 +218,9 @@ body{
     }
 }
 @media screen and (max-width: 600px) {
+    .slide{
+        margin-top:70px;
+    }
     .bb_cont{
         position: absolute;
         left:10%;
