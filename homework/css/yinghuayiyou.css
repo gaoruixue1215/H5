@@ -72,7 +72,7 @@ body{
     margin: 0;
     background-color: #e1e1e1;
 }
-.active{
+.ul .active{
     color:#cb5405;
     border-bottom: 3px solid #cb5405;
 }
