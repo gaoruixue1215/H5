@@ -500,7 +500,57 @@ body{
     }
 
 }
-
+@media screen and (max-width: 450px) {
+    .car{
+        width:10%;
+        height:10%;
+        overflow: hidden;
+        display: none;
+    }
+    .ca1{
+        display:block;
+    }
+    .ca1 img{
+        margin-left:10px;
+        margin-right:15px;
+        margin-top:60px;
+        width:10%;
+        height:30%;
+        float:left;
+    }
+    .ca2 h3{
+        font-size:22px;
+        color:blue;
+        margin-top:36px;
+        margin-bottom: 15px;
+    }
+    .ca2 span{
+        font-size:80%;
+    }
+    .ca1 button{
+        width:80px;
+        font-size:14px;
+    }
+    .car2{
+        width:250px;
+    }
+    .ca1 button{
+        width:78px;
+        height:30px;
+        background-color: transparent;
+        border-radius:8px;
+        color:black;
+        font-size:14px;
+        float:left;
+        margin-top:50px;
+    }
+    .ca2{
+        width:205px;
+        height:195px;
+        float:left;
+        color:black;
+    }
+}
 /*热门线路*/
 .route{
     width:100%;
